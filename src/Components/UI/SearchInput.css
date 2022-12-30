@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700,900"); 
+
+.search__container {
+  text-align: center;
+  width: 430px;
+  margin: 0 auto;
+  font-family: "Raleway", sans-serif;
+  padding-top: 30px;
+}
+
+.search__title {
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  color: #ff8b88;
+}
+
+.search__title_author {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+  color: #ff8b88;
+  padding-bottom: 8%;
+}
+
+.search__input {
+  width: 100%;
+  padding: 12px 24px;
+
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: white;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 1px solid #575756;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.search__input::placeholder {
+  text-transform: capitalize;
+}
+
+.search__input input:hover,
+input:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #ff8b88;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+.credits__container {
+  margin-top: 24px;
+}
+
+.credits__text {
+  text-align: center;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.credits__link {
+  color: #ff8b88;
+  text-decoration: none;
+  transition: color 250ms ease-in;
+}
+
+.credits link:hover,
+link:focus {
+  color: color(#ff8b88 blackness(+25%));
+}
