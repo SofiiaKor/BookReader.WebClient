@@ -16,8 +16,11 @@ const BooksList = (props) => {
           year={book.year}
           numberOfPages={book.numberOfPages}
           publisher={book.publisher}
+          ISBN={book.ISBN}
         />
   ));
+
+  console.log(bookList);
 
   return (
     <ul className="books-list">

@@ -10,7 +10,7 @@
     "postcss": "^8.4.16",
     "postcss-use": "^3.0.0",
     "react": "^18.0.0",
-    "react-bootstrap": "^2.7.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "^18.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^2.1.3",

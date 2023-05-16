@@ -10,6 +10,7 @@ const BookForm = (props) => {
   const [enteredDate, setEnteredDate] = useState("");
   const [enteredNumberOfPages, setEnteredNumberOfPages] = useState("");
   const [enteredPublisher, setEnteredPublisher] = useState("");
+  const [enteredISBN, setEnteredISBN] = useState("");
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -31,6 +32,10 @@ const BookForm = (props) => {
     setEnteredPublisher(event.target.value);
   };
 
+  const isbnChangeHandler = (event) => {
+    setEnteredISBN(event.target.value);
+  };
+
   const submitHandler = (event) => {
     event.preventDefault();
 
@@ -40,6 +45,7 @@ const BookForm = (props) => {
       date: new Date(enteredDate),
       numberOfPages: enteredNumberOfPages,
       publisher: enteredPublisher,
+      isbn: enteredISBN,
     };
 
     props.onSaveBookData(bookData);
@@ -48,6 +54,7 @@ const BookForm = (props) => {
     setEnteredDate("");
     setEnteredNumberOfPages("");
     setEnteredPublisher("");
+    setEnteredISBN("");
   };
 
   return (
@@ -106,6 +113,17 @@ const BookForm = (props) => {
             value={enteredPublisher}
             onChange={publisherChangeHandler}
             placeholder=""
+          />
+        </div>
+        <div className="new-book__control" tabIndex={6}>
+          <label htmlFor="isbn">ISBN</label>
+          <input
+            name="isbn"
+            type="number"
+            min="0"
+            value={enteredISBN}
+            onChange={isbnChangeHandler}
+            placeholder="0000000000000"
           />
         </div>
         <div className="new-book__actions" tabIndex={6}>
