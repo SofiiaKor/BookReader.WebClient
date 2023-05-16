@@ -32,15 +32,17 @@ const App = () => {
 
       const loadedBooks = [];
 
-      for (const key in data) {
+      for (const key in data.response) {
         loadedBooks.push({
-          id: key,
-          title: data[key].name,
-          author: data[key].author,
-          year: data[key].year,
+          id: data.response[key].id,
+          title: data.response[key].name,
+          author: data.response[key].author,
+          ISBN: data.response[key].isbn
         });
       }
 
+      console.log(loadedBooks);
+      
       setBooks(loadedBooks);
     } catch (error) {
       console.log(error.message);
@@ -65,6 +67,7 @@ const App = () => {
           year: bookData.year,
           publisher: bookData.publisher,
           numberOfPages: bookData.numberOfPages,
+          ISBN: bookData.isbn
         }),
       });
 
@@ -77,6 +80,7 @@ const App = () => {
   }, []);
 
   return (
+    <div className="App">
     <Layout>
       <Switch>
         <Route path="/" exact>
@@ -93,6 +97,7 @@ const App = () => {
         </Route>
       </Switch>
     </Layout>
+    </div>
   );
 };
 

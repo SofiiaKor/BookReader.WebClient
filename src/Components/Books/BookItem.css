@@ -1,8 +1,7 @@
 .book-item {
     align-items: center;
-    width: 150px;
-    height: 200px;
-    background-color: #4b4b4b;
+    width: 180px;
+    height: 276px;
   }
   
   .book-item__description {
